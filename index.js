@@ -32,7 +32,7 @@ app.on('ready', async () => {
 
             if (taskPID === null) {
                 if (isTaskRunning) {
-                    taskPID = Math.random(); // You can't get the PID here, so just set a flag
+                    taskPID = Math.random(); 
                     status = true;
                     tray.setToolTip(`${taskName} merge.`);
                     new Notification({
