@@ -1,0 +1,38 @@
+{
+    "name": "evidenta-by-vlady",
+    "version": "1.0.0",
+    "description": "SRLP",
+    "author": "vlady",
+    "main": "index.js",
+    "build": {
+      "appId": "com.example.reminder",
+      "productName": "Reminder",
+      "files": [
+        "icon.png",
+        "index.js",
+        "node_modules/**/*",
+        "package.json"
+      ],
+      "win": {
+        "target": "nsis",
+        "icon": "icon.ico"
+      },
+      "asar": true
+    },
+    "scripts": {
+      "start": "electron .",
+      "clean": "rimraf dist",
+      "build": "electron-builder",
+      "test-build": "electron-builder --win --x64 --no-sign"
+    },
+    "dependencies": {
+      "node-notifier": "^10.0.1",
+      "ps-list": "^8.1.1"
+    },
+    "devDependencies": {
+      "electron": "^32.1.2",
+      "electron-builder": "^25.0.5",
+      "rimraf": "^6.0.1"
+    }
+  }
+  
